@@ -521,6 +521,12 @@ body {
     width: auto;
 }
 
+.nav-logo img {
+    width: 80px;  
+    height: auto;
+    margin-right: 10px;
+}
+
 .nav-link {
     color: var(--neon-blue);
     text-decoration: none;
