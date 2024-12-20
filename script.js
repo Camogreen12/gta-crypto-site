@@ -3,6 +3,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // Debug log to verify script is running
     console.log('Script initialized');
 
+    // Launch countdown timer
+    const launchDate = new Date();
+    launchDate.setDate(launchDate.getDate() + 9); // Set to 9 days from now
+    launchDate.setHours(0, 0, 0, 0); // Set to midnight
+    
+    const countdownElement = document.getElementById('launchCountdown');
+    
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = launchDate - now;
+        
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        if (countdownElement) {
+            if (distance < 0) {
+                countdownElement.innerHTML = "Launch Day Is Here! 🚀";
+            } else {
+                countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }
+        }
+    }
+    
+    // Update countdown every second
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
     const priceCard = document.querySelector('.price-card');
     
     const observer = new IntersectionObserver((entries) => {
