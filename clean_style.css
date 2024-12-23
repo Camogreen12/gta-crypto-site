@@ -679,10 +679,10 @@ body {
 }
 
 .tokenomics-details {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
 }
 
 .token-detail {
@@ -716,6 +716,29 @@ body {
     position: absolute;
     left: 0;
     color: var(--neon-pink);
+}
+
+.token-detail.total-supply {
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--neon-yellow);
+    border-radius: 15px;
+    padding: 2rem 3rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    animation: pulseGlow 2s infinite;
+    max-width: 400px;
+}
+
+.token-detail.total-supply h3 {
+    color: var(--neon-yellow);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.token-detail.total-supply p {
+    font-size: 2rem;
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
 }
 
 .features-list {
