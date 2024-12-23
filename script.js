@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Debug log to verify script is running
     console.log('Script initialized');
 
-    // Launch countdown timer - Set to December 28, 2024 at midnight
-    const launchDate = new Date('2024-12-28T00:00:00-06:00');
+    // Launch countdown timer - Set to December 28, 2024 at 12:30 PM Chicago time
+    const launchDate = new Date('2024-12-28T12:30:00-06:00');
     
     const countdownElement = document.getElementById('launchCountdown');
     
