@@ -680,6 +680,16 @@ body {
     text-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
 }
 
+.coming-soon-tag {
+    color: var(--neon-pink);
+    font-size: 1.2rem;
+    text-shadow: 0 0 10px rgba(255, 27, 107, 0.5);
+    font-family: 'Orbitron', sans-serif;
+    margin-left: 1rem;
+    font-weight: 400;
+    animation: textGlow 2s infinite alternate;
+}
+
 .wp-section p {
     color: #fff;
     line-height: 1.8;
