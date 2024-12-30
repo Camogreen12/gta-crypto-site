@@ -781,3 +781,43 @@ body {
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
+
+.token-address {
+    position: relative;
+    cursor: pointer;
+}
+
+.token-address .address {
+    font-family: 'Courier New', monospace;
+    font-size: 1rem !important;
+    word-break: break-all;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--neon-blue);
+    transition: all 0.3s ease;
+}
+
+.token-address:hover .address {
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 15px rgba(255, 27, 107, 0.3);
+}
+
+.copy-btn {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: var(--neon-blue);
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+    color: var(--neon-pink);
+    transform: translateY(-50%) scale(1.1);
+}

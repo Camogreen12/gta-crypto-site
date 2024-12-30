@@ -208,13 +208,11 @@ window.addEventListener('load', () => {
 // Copy address functionality
 function copyAddress() {
     const address = document.querySelector('.address').textContent;
-    if (address !== 'Coming Soon') {
-        navigator.clipboard.writeText(address).then(() => {
-            const btn = document.querySelector('.copy-btn i');
-            btn.className = 'fas fa-check';
-            setTimeout(() => {
-                btn.className = 'fas fa-copy';
-            }, 2000);
-        });
-    }
+    navigator.clipboard.writeText(address).then(() => {
+        const btn = document.querySelector('.copy-btn i');
+        btn.className = 'fas fa-check';
+        setTimeout(() => {
+            btn.className = 'fas fa-copy';
+        }, 2000);
+    });
 }
